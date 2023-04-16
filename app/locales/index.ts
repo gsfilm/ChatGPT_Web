@@ -1,23 +1,9 @@
 import CN from "./cn";
-import EN from "./en";
-import TW from "./tw";
-import ES from "./es";
-import IT from "./it";
-import TR from "./tr";
-import JP from "./jp";
-import DE from "./de";
 
 export type { LocaleType } from "./cn";
 
 export const AllLangs = [
-  "en",
   "cn",
-  "tw",
-  "es",
-  "it",
-  "tr",
-  "jp",
-  "de",
 ] as const;
 type Lang = (typeof AllLangs)[number];
 
@@ -60,7 +46,7 @@ export function getLang(): Lang {
     }
   }
 
-  return "en";
+  return "cn";
 }
 
 export function changeLang(lang: Lang) {
@@ -69,12 +55,5 @@ export function changeLang(lang: Lang) {
 }
 
 export default {
-  en: EN,
   cn: CN,
-  tw: TW,
-  es: ES,
-  it: IT,
-  tr: TR,
-  jp: JP,
-  de: DE,
 }[getLang()] as typeof CN;
