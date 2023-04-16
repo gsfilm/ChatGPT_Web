@@ -59,10 +59,10 @@ const cn = {
       ResetAll: "重置所有选项",
       Close: "关闭",
       ConfirmResetAll: {
-        Confirm: "Are you sure you want to reset all configurations?",
+        Confirm: "您确定要重置所有配置吗？",
       },
       ConfirmClearAll: {
-        Confirm: "Are you sure you want to reset all chat?",
+        Confirm: "您确定要重置所有聊天吗？",
       },
     },
     Lang: {
