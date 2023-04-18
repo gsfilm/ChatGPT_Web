@@ -71,12 +71,12 @@ export const ROLES: Message["role"][] = ["system", "user", "assistant"];
 
 export const ALL_MODELS = [
   {
-    name: "GPT-4",
+    name: "gpt-4",
 	mod: "gpt-3.5-turbo",
     available: true,
   },
   {
-    name: "GPT-3.5",
+    name: "gpt-3.5-turbo",
 	mod: "gpt-3.5-turbo-0301",
     available: true,
   },
