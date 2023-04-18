@@ -74,26 +74,32 @@ const ENABLE_GPT4 = true;
 export const ALL_MODELS = [
   {
     name: "gpt-4",
+	model: "gpt-4",
     available: ENABLE_GPT4,
   },
   {
     name: "gpt-4-0314",
+	model: "gpt-4-0314",
     available: ENABLE_GPT4,
   },
   {
     name: "gpt-4-32k",
+	model: "gpt-4-32k",
     available: ENABLE_GPT4,
   },
   {
     name: "gpt-4-32k-0314",
+	model: "gpt-4-32k-0314",
     available: ENABLE_GPT4,
   },
   {
-    name: "gpt-3.5-turbo",
+    name: "gpt-4",
+	model: "gpt-3.5-turbo",
     available: true,
   },
   {
-    name: "gpt-3.5-turbo-0301",
+    name: "gpt-3.5-turbo",
+	model: "gpt-3.5-turbo-0301",
     available: true,
   },
 ];
@@ -111,10 +117,10 @@ export function limitNumber(
   return Math.min(max, Math.max(min, x));
 }
 
-export function limitModel(name: string) {
-  return ALL_MODELS.some((m) => m.name === name && m.available)
-    ? name
-    : ALL_MODELS[4].name;
+export function limitModel(model: string) {
+  return ALL_MODELS.some((m) => m.model === model && m.available)
+    ? model
+    : ALL_MODELS[4].model;
 }
 
 export const ModalConfigValidator = {
