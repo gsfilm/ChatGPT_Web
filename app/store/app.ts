@@ -72,12 +72,12 @@ export const ROLES: Message["role"][] = ["system", "user", "assistant"];
 export const ALL_MODELS = [
   {
     name: "gpt-4",
-	model: "gpt-3.5-turbo",
+	mod: "gpt-3.5-turbo",
     available: true,
   },
   {
     name: "gpt-3.5-turbo",
-	model: "gpt-3.5-turbo-0301",
+	mod: "gpt-3.5-turbo-0301",
     available: true,
   },
 ];
@@ -95,10 +95,8 @@ export function limitNumber(
   return Math.min(max, Math.max(min, x));
 }
 
-export function limitModel(name: string) {
-  return ALL_MODELS.some((m) => m.name === name && m.available)
-    ? model
-    : ALL_MODELS[1].model;
+export function limitModel(mod: string) {
+  return ALL_MODELS.some((m) => m.mod === mod && m.available) ? mod : ALL_MODELS[1].mod;
 }
 
 export const ModalConfigValidator = {
