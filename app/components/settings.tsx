@@ -488,7 +488,7 @@ export function Settings(props: { closeSettings: () => void }) {
               }}
             >
               {ALL_MODELS.map((v) => (
-                <option value={v.mod} key={v.mod} disabled={!v.available}>
+                <option value={v.name} key={v.name} disabled={!v.available}>
 					{v.name}
                 </option>
               ))}
