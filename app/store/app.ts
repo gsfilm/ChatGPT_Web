@@ -95,7 +95,7 @@ export function limitNumber(
   return Math.min(max, Math.max(min, x));
 }
 
-export function limitModel(mod: string) {
+export function limitModel(mod: string) { // 系统默认选项
   return ALL_MODELS.some((m) => m.mod === mod && m.available) ? mod : ALL_MODELS[1].mod;
 }
 
